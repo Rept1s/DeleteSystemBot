@@ -47,5 +47,3 @@ async def autopost_message(bot):
         except Exception as e:
             logging.error('Не получилось публиковать сообщение в группу: ' + str(chat_id[0]) + ' ' +
                           str((await get_chat_name(chat_id[0]))[0]) + ' ' + str(e))
-            await leave_chat_handler(bot, chat_id[0])
-            await delete_chat_id(chat_id[0])
